@@ -2,12 +2,9 @@ import  { Component } from '@angular/core'; //importo el comp ppal
 
 @Component({ //OBLIGATORIAMENTE lleva prop selector y template
 	selector: 'mi-componente', //es la etiqueta de la vista
-	template: ` 
-		<h1>{{titulo}} </h1>
-		<h2> {{comentario}} </h2>
-		<p> {{year}} </p>
-		
-	` //entre estas comillas puedo poner el codigo html que quiera
+	templateUrl: './mi-componente.component.html'
+
+	 //entre estas comillas puedo poner el codigo html que quiera
 
 	}) //es un JSON y es imp NO cerrarlo con ;
 

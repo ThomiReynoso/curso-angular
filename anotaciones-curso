@@ -1,0 +1,53 @@
+
+
+--tsconfig son archivos de config de typescritp, es el lenguaje que usamos dentro de angular (es como un javascript mejorado, con tipado fuerte)
+
+--package.json - cuando instalamos un paquete, lo instalamos ahi 
+--package-lock para instalar modulo de node
+--angular.json  para config el proyecto en gral, para cargar scripts, assets y librerias externas al framework
+--karma para pruebas
+
+--.gitignore para poner que NO queremos tener en el git remoto
+
+--editorconfig para config el editor de codigo
+
+--.e2e para testing
+
+---node_modules donde tenemos librerias y el framework en si, todos los paq de node estan ahi 
+
+---en src van a estar todos los componentes
+el main.ts es el modulo principal 
+index.html es la plantilla ppal, es el que se carga en la pag
+la etiqueta app-root es el componente que se esta actualizando constantemente
+
+
+
+
+COMPONENTES:
+
+	Componente es un trozo de pantalla de mi app, ya que esta se compone de distintos componentes
+	agular es un leng orientado a componentes
+	Cada comp va a tener una logica de la app
+	todos los comp son .ts
+	basicamente es una clase de javascript
+	se pueden reutilizar las veces que quiera incluso dentro de otros comp
+	https://cli.angular.io/ -- es la docu del cli(cmd)
+
+	ng g (generate) component "donde lo guardo"
+
+	app.component.ts 
+		el @component, es un "decorador", osea son caract que va a tener dicho comp, por ej:
+			"selector" es la etiqueta HTML que se usarà en el .html (directiva) 
+			"templete-url" es a q vista responde (.html) - De esta forma se tiene el cod HTML y el JS separado --MEJOR PRACTICA
+				"template" se podria usar eso, y pongo todo el html aca, pero queda menos organizado va entra (comillas invertidas)
+			"styles url" le puedo agregar hoja de estilo al comp (.css)
+
+
+	app.module.ts
+		.ahi tengo q importar los distintos comp, y si lo pongo dentro del "declarations", va a estar visible para TODA la app.. puedo agrega     comp, directivas o pipes
+		.imports debo cargar los modulos de la app
+		.providers cargo servicios
+		.bootstrap indico cual es el COMP INICIAL, sobre el cual va a estar cargandose la app
+
+ ORGANIZACION DE COMP
+ 	creo una carp components y voy creando carpetas por cada uno / otra es hacer un estilo mvc
